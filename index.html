@@ -43,7 +43,7 @@
 										<header class="major">
 											<h2>Sobre mim</h2>
 										</header>
-										<p>Meu nome é Lucas gabriel, eu tenho 16 anos, brasileiro, e desenvolvo em python junto com os meus amigos da <a href='https://amanoteam.ml'>Amano Team</a>, e estou atualmente no ensino médio.</p>
+										<p>Meu nome é Lucas gabriel, eu tenho <b id="idade"></b> anos, brasileiro, e desenvolvo em python junto com os meus amigos da <a href='https://amanoteam.ml'>Amano Team</a>, e estou atualmente no ensino médio.</p>
 									</div>
 									<span class="image"><img src="images/Lucas.jpg" alt="" /></span>
 								</div>
@@ -102,7 +102,7 @@
 								<ul class="icons">
 									<li><a href="https://t.me/AmanoTeam" class="icon fa-telegram alt"><span class="label">Telegram</span></a></li>
 									<li><a href="https://github.com/AmanoTeam" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
-									<li><a href="https://amanoteam.ml/#contact" class="icon fa-dribbble alt"><span class="label">Site</span></a></li>
+									<li><a href="https://amanoteam.com/" class="icon fa-dribbble alt"><span class="label">Site</span></a></li>
 								</ul>
 								</center>
 							</section>
@@ -130,6 +130,14 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				function calculate_age(dob) { 
+					var diff_ms = Date.now() - dob.getTime();
+					var age_dt = new Date(diff_ms);
+					return Math.abs(age_dt.getUTCFullYear() - 1970);
+				}
+				document.getElementById("idade").innerHTML = calculate_age(new Date(2003, 06, 24));
+			</script>
 
 	</body>
 </html>
