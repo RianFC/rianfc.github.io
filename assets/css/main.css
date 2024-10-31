@@ -4109,3 +4109,10 @@ input, select, textarea {
 					}
 
 	}
+
+.fixed-size {
+	width: 200px; /* Defina a largura desejada */
+	height: 200px; /* Defina a altura desejada */
+	object-fit: cover; /* Mantém a proporção da imagem */
+	border-radius: 50%; /* Faz a imagem ficar redonda */
+}
